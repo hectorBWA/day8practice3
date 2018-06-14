@@ -1,5 +1,2 @@
-<button id="start">start</button>
-<button id="stop">stop</button>
-<p id="log">
-      seconds.
-    </p>
+<button type="button" (click)="gameStart()" [disabled]="disableBtn" >start</button>
+<button type="button" (click)="gameStop()" [disabled]="!disableBtn" >stop</button>

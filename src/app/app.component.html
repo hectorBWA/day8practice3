@@ -1,3 +1,10 @@
-<game-control></game-control>
-<odd></odd>
-<even></even>
+<game-control (NumberCreated)='number=$event' ></game-control>
+<br>
+{{number % 2}}
+
+<odd *ngIf="number % 2"></odd>
+<even *ngIf="!(number % 2)"></even>
+<!-- <odd *ngIf="number % 2; else starwhal"></odd>
+<ng-template #starwhal>
+    <even></even>
+</ng-template> -->
