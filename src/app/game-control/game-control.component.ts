@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+var counter: number = 0;
+setInterval(function(){
+  console.log(counter);
+  counter++
+  if (counter === 10) {
+    clearInterval(counter);
+  }
+}, 1000);
+
 @Component({
   selector: 'game-control',
   templateUrl: './game-control.component.html',
@@ -8,12 +19,7 @@ import { Component, OnInit } from '@angular/core';
 export class GameControlComponent implements OnInit {
 
   
-  count: number = 0;
-
-
-   gameStart() {
-        this.count++;
-        }
+ 
 
 
   constructor() {
@@ -24,3 +30,5 @@ export class GameControlComponent implements OnInit {
   }
 
 }
+
+
